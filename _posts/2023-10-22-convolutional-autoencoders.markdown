@@ -7,7 +7,7 @@ categories:
 
 ## Discovering Digits with Convolutional Autoencoders
 
-| ![Each colour corresponds with a different digit — the seperation between digits has been learned!](https://cdn-images-1.medium.com/max/2000/1*HUtqpAilJD_Rsa5sfEHNhQ.png) |
+| ![tsne representation of mnist digits]({{site.baseurl}}/assets/images/cae/tsne.png) |
 |:--:| 
 | *Each colour corresponds with a different digit — the seperation between digits has been learned!* |
 
@@ -107,8 +107,8 @@ Here are the resulting reproductions of letters:
 
 <table>
   <tr>
-    <td><img src="https://cdn-images-1.medium.com/max/2000/1*edh5_iY1RWtR2AX-_lEiJA.png" alt="original 7" style="width: 100%; image-rendering: pixelated;"/></td>
-    <td><img src="https://cdn-images-1.medium.com/max/2000/1*GVuns1RKcMnBr58vRQr1-Q.png" alt="reconstructued 7" style="width: 100%; image-rendering: pixelated;"/></td>
+    <td><img src="{{site.baseurl}}/assets/images/cae/7_targ.png" alt="original 7" style="width: 100%; image-rendering: pixelated;"/></td>
+    <td><img src="{{site.baseurl}}/assets/images/cae/7_recon.png" alt="reconstructued 7" style="width: 100%; image-rendering: pixelated;"/></td>
   </tr>
   <tr>
     <td colspan="2">Original and reproduction of the letter 7.</td>
@@ -117,8 +117,8 @@ Here are the resulting reproductions of letters:
 <br />
 <table>
   <tr>
-    <td><img src="https://cdn-images-1.medium.com/max/2000/1*zXfw3voKkCDuQx35TyzrSg.png" alt="original 9" style="width: 100%; image-rendering: pixelated;"/></td>
-    <td><img src="https://cdn-images-1.medium.com/max/2000/1*tJcFhjI8M3X6Knln9gOQVQ.png" alt="reconstructed 9" style="width: 100%; image-rendering: pixelated;"/></td>
+    <td><img src="{{site.baseurl}}/assets/images/cae/9_targ.png" alt="original 9" style="width: 100%; image-rendering: pixelated;"/></td>
+    <td><img src="{{site.baseurl}}/assets/images/cae/9_recon.png" alt="reconstructed 9" style="width: 100%; image-rendering: pixelated;"/></td>
   </tr>
   <tr>
     <td colspan="2">Original and reproduction of letter 9.</td>
@@ -127,7 +127,7 @@ Here are the resulting reproductions of letters:
 
 Now our autoencoder is trained, we can use the encoder to “vectorize” images. [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding) let’s us visualize these length-128 vectors in 2 dimensions. Here is the resulting plot, where each colour represents a different digit.
 
-![fluorine iodide band structure plot](https://cdn-images-1.medium.com/max/NaN/1*HUtqpAilJD_Rsa5sfEHNhQ.png)
+![tsne representation of mnist digits]({{site.baseurl}}/assets/images/cae/tsne.png)
 
 There we go! The separation between different digits is quite impressive, considering we never told the network the labels explicitly.
 
@@ -137,7 +137,7 @@ Considering the simplicity of this architecture, it does pretty well. However, a
 
 Currently my lab partner and I are training an autoencoder to recreate band structure plots similar to the one below and are getting blurry white images as a result.
 
-![](https://cdn-images-1.medium.com/max/2000/1*eWdD9drcmn0rv_0keM_KFA.png)
+![fluorine iodide band structure plot]({{site.baseurl}}/assets/images/cae/bandstructure.png)
 
 This might suggest that our activations are tending towards zero as you go through the layers — this could be fixed by batch normalisation or LSUV. We’re also going to look at ResNet architectures for inspiration.
 
