@@ -3,7 +3,7 @@ layout: post
 title:  "Multi-GPU Physics Based Hamiltonian Monte
 Carlo"
 date:   2022-09-15
-categories: statistics hpc jax mpi python
+categories:
 ---
 
 <div class="editors-note">
